@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-psicodelico-maravilloso-dibujado-mano_23-2149088958.jpg?w=900&t=st=1678319818~exp=1678320418~hmac=6e86b899f9ecbb5196e4ea2f72c53993badce5d7115b219a42c306cb77cd3f88");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  
 }
 
 code {

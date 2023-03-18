@@ -1,0 +1,40 @@
+.div{
+    background-color: rgb(239, 207, 67);
+    width: fit-content;
+    padding: 1em;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 7px 7px 5px 0px rgb(255, 213, 213);
+    flex-direction: column;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+    margin-top: 150px;
+    ;
+}
+.div:hover{
+    border: 1px rgb(0, 0, 0);
+    cursor: pointer;
+    transform: translateY(-3px)
+}
+
+.img{
+    margin: auto;
+    border-radius: 10px;
+    border: solid 1.5px black;
+    max-width: 50%;
+    max-height: 40%;
+    box-shadow: 5px 5px 2px 0px #425951(146, 185, 132);
+    display: block;
+}
+
+.h2{
+    margin: 1px;
+    padding: 7px;
+    text-align: center;
+}
+
+.h3{
+    margin: 1px;
+    padding: 7px;
+    text-align: center;
+}
