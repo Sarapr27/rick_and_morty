@@ -14,6 +14,7 @@ class Nav extends React.Component {
             <div className={styles.container}>
                 <Link className={styles.link} to="/">Home</Link>
                 <Link className={styles.link} to="/about">About</Link>
+                <Link className={styles.link} to="/favorites">My Favorites</Link>
             <SearchBar onSearch={this.props.onSearch} />
             </div>
         )

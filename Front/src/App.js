@@ -6,6 +6,7 @@ import About from "./components/About/About"
 import Detail from "./components/Detail/Detail"
 import Form from "./components/Form/Form"
 import style from "./App.module.css";
+import Favorites from './components/Favorites/Favorites.jsx';
 
 function App () {
 
@@ -28,11 +29,14 @@ function App () {
 
 // EVENT HANDLERS
 const onSearch = (id) => {
-    const URL_BASE = "https://rickandmortyapi.com/api"
-    const KEY = "679d35fad146.652aa97041e049ba56fe"
+    const URL_BASE = "http://localhost:3001/rickandmorty"
+   // const KEY = "679d35fad146.652aa97041e049ba56fe"
     
+   if(characters.find((char) => char.id === id)) {
+    return alert ("Repeated character");
+   }
 
-    fetch (`${URL_BASE}/character/${id}?key=${KEY}`)
+    fetch (`${URL_BASE}/onsearch/${id}`)
     .then((response)=>response.json())
     .then(data=>{
       if(data.name){
@@ -84,6 +88,7 @@ const onSearch = (id) => {
         element={<Cards onClose={onClose} characters={characters} />} 
         />
         <Route path="/about" element={<About />}/>
+        <Route path="/favorites" element={<Favorites />}/>
         <Route path="/detail/:detailId" element={<Detail />}/>
       </Routes>
       <div>
