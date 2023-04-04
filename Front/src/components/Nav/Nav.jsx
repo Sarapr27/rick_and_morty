@@ -12,7 +12,7 @@ class Nav extends React.Component {
     render(){
         return(
             <div className={styles.container}>
-                <Link className={styles.link} to="/">Home</Link>
+                <Link className={styles.link} to="/home">Home</Link>
                 <Link className={styles.link} to="/about">About</Link>
                 <Link className={styles.link} to="/favorites">My Favorites</Link>
             <SearchBar onSearch={this.props.onSearch} />

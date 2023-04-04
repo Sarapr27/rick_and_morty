@@ -17,9 +17,7 @@ function App () {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!access && pathname !== "/") {
-      navigate("/");
-    }
+    !access && navigate("/");
   }, [access]);
 
   // CREDENCIALES FAKE
@@ -29,7 +27,7 @@ function App () {
 
 // EVENT HANDLERS
 const onSearch = (id) => {
-    const URL_BASE = "http://localhost:3001/rickandmorty"
+    const URL_BASE = "http://localhost:3001"
    // const KEY = "679d35fad146.652aa97041e049ba56fe"
     
    if(characters.find((char) => char.id === id)) {

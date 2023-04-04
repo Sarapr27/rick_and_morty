@@ -9,7 +9,7 @@ const Detail = () => {
     console.log(character)
     
     useEffect(() => {
-      const URL_BASE = "http://localhost:3001/rickandmorty";
+      const URL_BASE = "http://localhost:3001";
       axios(`${URL_BASE}/detail/${detailId}`)
       .then((response) => {
         console.log(response)
@@ -17,7 +17,20 @@ const Detail = () => {
   },[detailId])
 
 
-    // useEffect(() => {
+    return (
+        <div className={style.div}>
+            <h2 className={style.h2}>Name: {character.name}</h2>
+            <img className={style.img} src={character.image} alt={character.name}/>
+            <h3 className={style.h3}>Gender: {character.gender}</h3>
+            <h3 className={style.h3}>Origin: {character.origin?.name}</h3>
+            <h3 className={style.h3}>Species: {character.species}</h3>
+        </div>
+    );
+};
+
+export default Detail;
+
+  // useEffect(() => {
     //     fetch(`http://localhost:3001/rickandmorty/${detailId}`)
     //       .then((response) => response.json())
     //       .then((char) => {
@@ -33,16 +46,3 @@ const Detail = () => {
     //       });
     //     return setCharacter({});
     //   }, [detailId]);
-
-    return (
-        <div className={style.div}>
-            <h2 className={style.h2}>Name: {character.name}</h2>
-            <img className={style.img} src={character.image} alt={character.name}/>
-            <h3 className={style.h3}>Gender: {character.gender}</h3>
-            <h3 className={style.h3}>Origin: {character.origin?.name}</h3>
-            <h3 className={style.h3}>Species: {character.species}</h3>
-        </div>
-    );
-};
-
-export default Detail;
