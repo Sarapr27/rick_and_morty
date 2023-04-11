@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE } from "./actions";
+import { ADD_FAVORITE, REMOVE_FAVORITE, GET_CHARACTER_DETAIL, GET_FAVORITES } from "./actions";
 
 const initialState = {
     myFavorites: [],
@@ -12,6 +12,12 @@ const rootReducer = (state = initialState, action) => {
 
         case REMOVE_FAVORITE:
             return { ...state, myFavorites: state.myFavorites.filter((char)=>char.id !== action.payload),};
+
+        case GET_CHARACTER_DETAIL:
+            return {...state, characterDetail: action.payload,};
+        
+        case GET_FAVORITES:
+            return { ...state, myFavorites: action.payload };
 
         default:
             return { ...state };

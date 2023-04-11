@@ -20,7 +20,7 @@ function App () {
     !access && navigate("/");
   }, [access]);
 
-  // CREDENCIALES FAKE
+  // CREDENCIALES 
   const username = "sara@mail.com";
   const password = "sara123";
 
@@ -28,7 +28,7 @@ function App () {
 // EVENT HANDLERS
 const onSearch = (id) => {
     const URL_BASE = "http://localhost:3001"
-   // const KEY = "679d35fad146.652aa97041e049ba56fe"
+   
     
    if(characters.find((char) => char.id === id)) {
     return alert ("Repeated character");
@@ -73,11 +73,12 @@ const onSearch = (id) => {
   return (
     <div className='App' style={{ padding: '25px' }}>
       
-      <div className = {style.logo}>
-        <img src="https://1000logos.net/wp-content/uploads/2022/03/Rick-and-Morty.png" alt= "rym"></img>
-      </div>
+      
       <div className={style.nav}>
       {pathname !== "/" && <Nav onSearch ={onSearch}/>}
+      </div>
+      <div className = {style.logo}>
+        <img src="https://1000logos.net/wp-content/uploads/2022/03/Rick-and-Morty.png" alt= "rym"></img>
       </div>
       <Routes>
         <Route path="/" element={<Form login={login}/>}/>

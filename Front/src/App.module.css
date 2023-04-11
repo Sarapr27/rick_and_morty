@@ -4,24 +4,13 @@
 }
 
 img {
-   max-width: 400%;
-   max-height: 400%;
+   max-width: 30%;
+   max-height: 30%;
 }
 
 .logo {
-   height: 100px;
-   width: 100px;
-   position: absolute; /* Para poder mover el elemento */
-   top: 190px; /* Coloca la parte superior del elemento en el 50% del viewport */
-   left: 50%; /* Coloca la parte izquierda del elemento en el 50% del viewport */
-   transform: translate(-50%, -50%); /* Centra el elemento en el centro del viewport */
    display: flex;
+   align-content: center;
    justify-content: center;
-   align-items: center;
-   text-align: center;
-   
 }
 
-.nav {
-   
-}
